@@ -1,0 +1,43 @@
+<html>
+
+	<head>
+		<title></title>
+
+		
+	</head>
+
+	<body>
+		<h1>My African Adventures!</h1>
+		
+
+		<!--
+	{
+        "country" : "South Africa",
+        "name" : "Capetown",
+        "description" : "Capetown is awesome!",
+        "rating" : 4,
+        "image_name" : "capetown.jpg"
+      }
+		-->
+		
+		<% 
+			for (var i = 0; i < locations.length; i++) {
+				var location = locations[i];
+		%>		
+			<div>
+				<h2><%=location.name%> - <%=location.country%></h2>
+				<img src="/images/<%=location.image_name%>"/>
+				<p><%=location.description%></p>
+				<p>Rating: <%=location.rating%> (out of 5)</p>
+			</div>
+		<%
+			}
+		%>
+		
+		
+		
+
+	</body>
+
+
+</html>
